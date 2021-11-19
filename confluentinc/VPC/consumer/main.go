@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "gokafkademo/config"
+    "tencent_ckafka/confluentinc/config"
     "log"
     "strings"
 
