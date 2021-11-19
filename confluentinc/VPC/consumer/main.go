@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-    cfg, err := config.ParseConfig("../config/kafka.json")
+    cfg, err := config.ParseConfig("../config/config.json")
     if err != nil {
         log.Fatal(err)
     }

@@ -1,13 +1,14 @@
 package main
+
 import (
     "fmt"
-    "tencent_ckafka/confluentinc/config"
+    "github.com/confluentinc/confluent-kafka-go/kafka"
     "log"
     "strings"
-    "github.com/confluentinc/confluent-kafka-go/kafka"
+    "tencent_ckafka/confluentinc/config"
 )
 func main() {
-    cfg, err := config.ParseConfig("../config/kafka.json")
+    cfg, err := config.ParseConfig("./config/config.json")
     if err != nil {
         log.Fatal(err)
     }
