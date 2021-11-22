@@ -8,16 +8,20 @@ import (
 // CKafkaConfig Ckafka配置项
 type CKafkaConfig struct {
 	Topic           []string   `json:"topic"`
-	SASL            CKafkaSASL `json:"sasl"`
+	Ckafka            CKafkaInfo `json:"sasl"`
 	Servers         []string   `json:"bootstrapServers"`
 	ConsumerGroupId string     `json:"consumerGroupId"`
 }
 
-// CKafkaSASL sasl配置
-type CKafkaSASL struct {
+// CKafka配置
+type CKafkaInfo struct {
 	Username   string `json:"username"`
 	Password   string `json:"password"`
 	InstanceId string `json:"instanceId"`
+	KafkaAccessId string `json:"kafka_access_id"`
+	KafkaAccessSecret      string `json:"kafka_access_secret"`
+	Endpoint               string `json:"endpoint"`
+	Region                 string `json:"region"`
 }
 
 // ParseConfig 配置解析结构

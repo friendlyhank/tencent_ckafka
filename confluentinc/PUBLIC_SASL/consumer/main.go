@@ -2,16 +2,15 @@ package main
 
 import (
 	"fmt"
+	"github.com/confluentinc/confluent-kafka-go/kafka"
 	"log"
 	"strings"
-	"tencent_ckafka/confluentinc/config"
-
-	"github.com/confluentinc/confluent-kafka-go/kafka"
+	config2 "tencent_ckafka/config"
 )
 
 func main() {
 
-	cfg, err := config.ParseConfig("../config/config.json")
+	cfg, err := config2.ParseConfig("./config/config.json")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -24,8 +23,8 @@ func main() {
 		// 在本地配置 ACL 策略。
 		"security.protocol": "SASL_PLAINTEXT",
 		// username 是实例 ID + # + 配置的用户名，password 是配置的用户密码。
-		"sasl.username": fmt.Sprintf("%s#%s", cfg.SASL.InstanceId, cfg.SASL.Username),
-		"sasl.password": cfg.SASL.Password,
+		"sasl.username": fmt.Sprintf("%s#%s", cfg.Ckafka.InstanceId, cfg.Ckafka.Username),
+		"sasl.password": cfg.Ckafka.Password,
 		// 设置的消息消费组
 		"group.id":          cfg.ConsumerGroupId,
 		"auto.offset.reset": "earliest",
@@ -40,7 +39,7 @@ func main() {
 		log.Fatal(err)
 	}
 	// 订阅的消息topic 列表
-	err = c.SubscribeTopics([]string{"test", "test-topic"}, nil)
+	err = c.SubscribeTopics([]string{"test"}, nil)
 	if err != nil {
 		log.Fatal(err)
 	}

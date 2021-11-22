@@ -1,0 +1,6 @@
+github.com/confluentinc/confluent-kafka-go v1.7.0 h1:tXh3LWb2Ne0WiU3ng4h5qiGA9XV61rz46w60O+cq8bM=
+github.com/confluentinc/confluent-kafka-go v1.7.0/go.mod h1:u2zNLny2xq+5rWeTQjFHbDzzNuba4P1vo31r9r4uAdg=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/ckafka v1.0.285 h1:N6mv2wX9qDQ7wAHn9bs/qvTzF2KsuRVGeYQLjjAr5S0=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/ckafka v1.0.285/go.mod h1:toYhD7pJDpz6XY3cf/zhUXtKDRt1CbLkgmOidQ2j8kA=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.285 h1:/pxhtrvLDidDxEi0MFyICPKeJ+gvtIBdfZZSx3Nz8rA=
+github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common v1.0.285/go.mod h1:7sCQWVkxcsR38nffDW057DRGk8mUjK1Ing/EFOK8s8Y=
