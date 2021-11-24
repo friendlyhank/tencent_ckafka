@@ -44,7 +44,7 @@ func main() {
         }
     }()
     // 异步发送消息
-    topic := cfg.Topic[0]
+    topic := "test"
     for _, word := range []string{"Confluent-Kafka", "Golang Client Message"} {
         _ = p.Produce(&kafka.Message{
             TopicPartition: kafka.TopicPartition{Topic: &topic, Partition: kafka.PartitionAny},

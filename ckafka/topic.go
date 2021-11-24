@@ -10,7 +10,7 @@ import (
 	config2 "tencent_ckafka/config"
 )
 
-// 创建topic
+// CreateTopic - 创建topic
 func CreateTopic(topic string) error{
 	cfg, err := config2.ParseConfig("./config/config.json")
 	if err != nil {
@@ -48,7 +48,7 @@ func CreateTopic(topic string) error{
 	return nil
 }
 
-// 删除topic
+// DeleteTopic -删除topic
 func DeleteTopic(topic string) error{
 	cfg, err := config2.ParseConfig("./config/config.json")
 	if err != nil {

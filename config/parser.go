@@ -7,7 +7,6 @@ import (
 
 // CKafkaConfig Ckafka配置项
 type CKafkaConfig struct {
-	Topic           []string   `json:"topic"`
 	Ckafka            CKafkaInfo `json:"sasl"`
 	Servers         []string   `json:"bootstrapServers"`
 	ConsumerGroupId string     `json:"consumerGroupId"`
